@@ -1,4 +1,4 @@
-package com.company;
+package com.itTextCollectionTest3.src.com.company;
 
 import java.util.Objects;
 
@@ -19,10 +19,9 @@ public class Print implements Runnable {
         this.n = n;
     }
 
-    public void print(int n, String a) {
+    synchronized void print(int n, String a) {
         for (int i = 0; i < n; i++) {
             System.out.println(a);
-
         }
     }
 
@@ -51,4 +50,5 @@ public class Print implements Runnable {
     public void run() {
         print(n, a);
     }
+
 }
